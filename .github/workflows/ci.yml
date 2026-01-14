@@ -8,6 +8,7 @@ on:
 
 jobs:
   lint:
+    name: Lint Python code
     runs-on: ubuntu-latest
 
     steps:
@@ -29,7 +30,7 @@ jobs:
           pre-commit run --all-files
 
   docker:
-    name: Build, scan and publish backend image
+    name: Build, scan, and publish backend image
     runs-on: ubuntu-latest
     needs: lint
 
